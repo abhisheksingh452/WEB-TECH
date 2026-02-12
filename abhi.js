@@ -261,7 +261,7 @@ function bakecake(mycallback){
 bakecake(()=>{
     console.log("Eating cake...");
     });
-    */
+    
 
     //write a program in js to check wheather you can go to kashmir or not based on petrol availability the minimum petrol required is 100 l . do this using Promise
 function checkPetrol(petrol){
@@ -280,6 +280,12 @@ checkPetrol(120)
 .catch((error)=>{
     console.log(error);
 });
+*/
+console.log("1");
+setTimeout(()=>{
+    console.log("2");
+},3000);
+console.log("3");
 
 
 
