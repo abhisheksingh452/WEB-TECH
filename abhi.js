@@ -280,13 +280,51 @@ checkPetrol(120)
 .catch((error)=>{
     console.log(error);
 });
-*/
+
 console.log("1");
 setTimeout(()=>{
     console.log("2");
 },3000);
 console.log("3");
 
+console.log("before execution");
+for(var i=0;i<2;i++){
+    setTimeout(function(){
+        console.log("set time put message");
+        func1()
+    },1000)
+    func2()
+}
+console.log("After execution")
+
+function func1(){
+    console.log("in function 1");
+}
+function func2(){
+    console.log("in function 2");
+}
+    */
+
+// console.log("1. start");
+// setTimeout(()=>{
+//     console.log("2. cake is ready")
+// },2000);
+
+function bakeCake(mycallback){
+    console.log("1.Baking cake...");
+    setTimeout(()=>{
+        console.log("2. Cake is baked!");
+        mycallback();
+    },2000);
+}
+    bakeCake(()=>{
+        console.log("3. cake is ready");
+    });
+
+    //write a program in js without promise to chech if cake is baked or not and then eat the cake
+
+    // now do it with promises
+    
 
 
 
